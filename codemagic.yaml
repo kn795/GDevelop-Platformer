@@ -1,0 +1,18 @@
+workflows:
+  my-workflow:
+    scripts:
+      - name: Install dependencies
+        script: npm ci
+      - name: Add Android platform
+        script: |
+          set -e # exit on first failed command
+
+          cordova platform remove android --nosave
+          cordova platform add android --confirm --no-interactive --noresources
+      - name: Build Android release
+        script: |
+          set -e # exit on first failed command
+
+          cordova build android --no-interactive
+    artifacts:
+    - platforms/android/app/build/outputs/**/*.apk
