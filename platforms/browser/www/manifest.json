@@ -1,0 +1,9 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Testing (Platformer)",
+  "short_name": "Testing (Platformer)",
+  "version": "com.example.platformer",
+  "icons": [],
+  "start_url": "index.html"
+}
